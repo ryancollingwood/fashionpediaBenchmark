@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         ca-certificates \
         build-essential \
         git \
-        python3 \
+        python3.8 \
         python3-pip \
         python-setuptools && \
     export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
