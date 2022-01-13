@@ -1,7 +1,7 @@
 # Docker image for running TPU tensorflow examples.
 FROM ubuntu:bionic
 
-ARG USERNAME=user-name-goes-here
+ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
