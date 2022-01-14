@@ -1,0 +1,14 @@
+pyyaml
+wheel
+tensorflow #==2.2.0
+google-cloud-storage
+google-api-python-client
+oauth2client
+Pillow
+cython
+pycocotools
+#git+https://github.com/waleedka/coco.git#subdirectory=PythonAPI&egg=pycocotools
+pyyaml
+opencv-python
+tqdm
+pandas

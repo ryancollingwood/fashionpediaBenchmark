@@ -7,7 +7,11 @@ ARG USER_GID=$USER_UID
 
 # Create the user
 RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
+    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
+    && apt-get update \
+    && apt-get install -y sudo \
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
@@ -18,8 +22,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         ca-certificates \
         build-essential \
         git \
-        python3.8 \
-        python3-pip \
+        python3.8-dev \
+        python3.8-distutils\
+#        python3-pip \
         python-setuptools && \
     export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
     echo "deb https://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" > /etc/apt/sources.list.d/google-cloud-sdk.list && \
@@ -28,7 +33,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get install -y google-cloud-sdk
 
 RUN curl https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py && \
-    python3 /tmp/get-pip.py
+    python3.8 /tmp/get-pip.py
 
 RUN pip3 install pyyaml && \
     pip3 install wheel && \
