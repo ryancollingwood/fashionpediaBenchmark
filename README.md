@@ -26,7 +26,7 @@ pip3 install .
 ## Use it
 1. - Add model checkpoint to `fashionpediaBenchmark/models/official/detection/projects/fashionpedia/checkpoints` 
    - to download checkpoints take at look at [fashionpedia readme](models/official/detection/projects/fashionpedia/README.md)
-   - for this example you need [spinenet](https://storage.googleapis.com/cloud-tpu-checkpoints/detection/projects/fashionpedia/fashionpedia-spinenet-143.tar.gz)
+   - for this example you need [spinenet-143](https://storage.googleapis.com/cloud-tpu-checkpoints/detection/projects/fashionpedia/fashionpedia-spinenet-143.tar.gz)
 2. from `fashionpediaBenchmark/models/official/detection` folder 
 ```
 python3.8 inference_fashionpedia.py --model="attribute_mask_rcnn" --image_size="1024" --checkpoint_path="projects/fashionpedia/checkpoints/fashionpedia-spinenet-143/model.ckpt" --label_map_file="projects/fashionpedia/dataset/fashionpedia_label_map.csv" --image_file_pattern="projects/fashionpedia/images/train/*.jpg" --output_html="projects/fashionpedia/output/out.html" --max_boxes_to_draw=15 --min_score_threshold=0.8 --config_file="projects/fashionpedia/configs/yaml/spinenet143_amrcnn.yaml" --output_file="projects/fashionpedia/output/output.npy"
