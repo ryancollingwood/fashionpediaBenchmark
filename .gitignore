@@ -14,7 +14,8 @@ node_modules
 *.pyc
 __pycache__
 *.swp
-.vscode/
+.vscode/*
+!.vscode/launch.json
 /models/build
 /models/cloud_tpu_samples.egg-info
 /models/official/detection/projects/fashionpedia/checkpoints/*
