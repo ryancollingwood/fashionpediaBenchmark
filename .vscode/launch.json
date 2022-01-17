@@ -42,7 +42,7 @@
                 "--image_size=1024", 
                 "--checkpoint_path=${workspaceFolder}/models/official/detection/projects/fashionpedia/checkpoints/fashionpedia-r101-fpn/model.ckpt",
                 "--label_map_file=${workspaceFolder}/models/official/detection/projects/fashionpedia/dataset/fashionpedia_label_map.csv", 
-                "--image_file_pattern=${workspaceFolder}/models/official/detection/projects/fashionpedia/images/train/*.jpg",
+                "--image_file_pattern=${workspaceFolder}/models/official/detection/projects/fashionpedia/images/train/11.jpg",
                 "--output_html=${workspaceFolder}/models/official/detection/projects/fashionpedia/output/outRes.html", 
                 "--max_boxes_to_draw=15", 
                 "--min_score_threshold=0.8",
