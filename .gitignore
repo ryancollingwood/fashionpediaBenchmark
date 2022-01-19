@@ -21,4 +21,5 @@ __pycache__
 /models/official/detection/projects/fashionpedia/checkpoints/*
 !/models/official/detection/projects/fashionpedia/checkpoints/README.md
 /models/official/detection/projects/fashionpedia/output/*
+!/models/official/detection/projects/fashionpedia/output/outSpine.html
 !/models/official/detection/projects/fashionpedia/output/README.md
