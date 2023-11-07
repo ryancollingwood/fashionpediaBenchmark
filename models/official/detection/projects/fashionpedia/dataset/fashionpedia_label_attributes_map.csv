@@ -1,0 +1,294 @@
+0:classic (t-shirt) - nickname
+1:polo (shirt) - nickname
+2:undershirt - nickname
+3:henley (shirt) - nickname
+4:ringer (t-shirt) - nickname
+5:raglan (t-shirt) - nickname
+6:rugby (shirt) - nickname
+7:sailor (shirt) - nickname
+8:crop (top) - nickname
+9:halter (top) - nickname
+10:camisole - nickname
+11:tank (top) - nickname
+12:peasant (top) - nickname
+13:tube (top) - nickname
+14:tunic (top) - nickname
+15:smock (top) - nickname
+16:hoodie - nickname
+17:blazer - nickname
+18:pea (jacket) - nickname
+19:puffer (jacket) - nickname
+20:biker (jacket) - nickname
+21:trucker (jacket) - nickname
+22:bomber (jacket) - nickname
+23:anorak - nickname
+24:safari (jacket) - nickname
+25:mao (jacket) - nickname
+26:nehru (jacket) - nickname
+27:norfolk (jacket) - nickname
+28:classic military (jacket) - nickname
+29:track (jacket) - nickname
+30:windbreaker - nickname
+31:chanel (jacket) - nickname
+32:bolero - nickname
+33:tuxedo (jacket) - nickname
+34:varsity (jacket) - nickname
+35:crop (jacket) - nickname
+36:jeans - nickname
+37:sweatpants - nickname
+38:leggings - nickname
+39:hip-huggers (pants) - nickname
+40:cargo (pants) - nickname
+41:culottes - nickname
+42:capri (pants) - nickname
+43:harem (pants) - nickname
+44:sailor (pants) - nickname
+45:jodhpur - nickname
+46:peg (pants) - nickname
+47:camo (pants) - nickname
+48:track (pants) - nickname
+49:crop (pants) - nickname
+50:short (shorts) - nickname
+51:booty (shorts) - nickname
+52:bermuda (shorts) - nickname
+53:cargo (shorts) - nickname
+54:trunks - nickname
+55:boardshorts - nickname
+56:skort - nickname
+57:roll-up (shorts) - nickname
+58:tie-up (shorts) - nickname
+59:culotte (shorts) - nickname
+60:lounge (shorts) - nickname
+61:bloomers - nickname
+62:tutu (skirt) - nickname
+63:kilt - nickname
+64:wrap (skirt) - nickname
+65:skater (skirt) - nickname
+66:cargo (skirt) - nickname
+67:hobble (skirt) - nickname
+68:sheath (skirt) - nickname
+69:ball gown (skirt) - nickname
+70:gypsy (skirt) - nickname
+71:rah-rah (skirt) - nickname
+72:prairie (skirt) - nickname
+73:flamenco (skirt) - nickname
+74:accordion (skirt) - nickname
+75:sarong (skirt) - nickname
+76:tulip (skirt) - nickname
+77:dirndl (skirt) - nickname
+78:godet (skirt) - nickname
+79:blanket (coat) - nickname
+80:parka - nickname
+81:trench (coat) - nickname
+82:pea (coat) - nickname
+83:shearling (coat) - nickname
+84:teddy bear (coat) - nickname
+85:puffer (coat) - nickname
+86:duster (coat) - nickname
+87:raincoat - nickname
+88:kimono - nickname
+89:robe - nickname
+90:dress (coat ) - nickname
+91:duffle (coat) - nickname
+92:wrap (coat) - nickname
+93:military (coat) - nickname
+94:swing (coat) - nickname
+95:halter (dress) - nickname
+96:wrap (dress) - nickname
+97:chemise (dress) - nickname
+98:slip (dress) - nickname
+99:cheongsams - nickname
+100:jumper (dress) - nickname
+101:shift (dress) - nickname
+102:sheath (dress) - nickname
+103:shirt (dress) - nickname
+104:sundress - nickname
+105:kaftan - nickname
+106:bodycon (dress) - nickname
+107:nightgown - nickname
+108:gown - nickname
+109:sweater (dress) - nickname
+110:tea (dress) - nickname
+111:blouson (dress) - nickname
+112:tunic (dress) - nickname
+113:skater (dress) - nickname
+114:asymmetrical - silhouette
+115:symmetrical - silhouette
+116:peplum - silhouette
+117:circle - silhouette
+118:flare - silhouette
+119:fit and flare - silhouette
+120:trumpet - silhouette
+121:mermaid - silhouette
+122:balloon - silhouette
+123:bell - silhouette
+124:bell bottom - silhouette
+125:bootcut - silhouette
+126:peg - silhouette
+127:pencil - silhouette
+128:straight - silhouette
+129:a-line - silhouette
+130:tent - silhouette
+131:baggy - silhouette
+132:wide leg - silhouette
+133:high low - silhouette
+134:curved (fit) - silhouette
+135:tight (fit) - silhouette
+136:regular (fit) - silhouette
+137:loose (fit) - silhouette
+138:oversized - silhouette
+139:empire waistline - waistline
+140:dropped waistline - waistline
+141:high waist - waistline
+142:normal waist - waistline
+143:low waist - waistline
+144:basque (wasitline) - waistline
+145:no waistline - waistline
+146:above-the-hip (length) - length
+147:hip (length) - length
+148:micro (length) - length
+149:mini (length) - length
+150:above-the-knee (length) - length
+151:knee (length) - length
+152:below the knee (length) - length
+153:midi - length
+154:maxi (length) - length
+155:floor (length) - length
+156:sleeveless - length
+157:short (length) - length
+158:elbow-length - length
+159:three quarter (length) - length
+160:wrist-length - length
+161:asymmetric (collar) - nickname
+162:regular (collar) - nickname
+163:shirt (collar) - nickname
+164:polo (collar) - nickname
+165:chelsea (collar) - nickname
+166:banded (collar) - nickname
+167:mandarin (collar) - nickname
+168:peter pan (collar) - nickname
+169:bow (collar) - nickname
+170:stand-away (collar) - nickname
+171:jabot (collar) - nickname
+172:sailor (collar) - nickname
+173:oversized (collar) - nickname
+174:notched (lapel) - nickname
+175:peak (lapel) - nickname
+176:shawl (lapel) - nickname
+177:napoleon (lapel) - nickname
+178:oversized (lapel) - nickname
+179:collarless - neckline type
+180:asymmetric (neckline) - neckline type
+181:crew (neck) - neckline type
+182:round (neck) - neckline type
+183:v-neck - neckline type
+184:surplice (neck) - neckline type
+185:oval (neck) - neckline type
+186:u-neck - neckline type
+187:sweetheart (neckline) - neckline type
+188:queen anne (neck) - neckline type
+189:boat (neck) - neckline type
+190:scoop (neck) - neckline type
+191:square (neckline) - neckline type
+192:plunging (neckline) - neckline type
+193:keyhole (neck) - neckline type
+194:halter (neck) - neckline type
+195:crossover (neck) - neckline type
+196:choker (neck) - neckline type
+197:high (neck) - neckline type
+198:turtle (neck) - neckline type
+199:cowl (neck) - neckline type
+200:straight across (neck) - neckline type
+201:illusion (neck) - neckline type
+202:off-the-shoulder - neckline type
+203:one shoulder - neckline type
+204:set-in sleeve - nickname
+205:dropped-shoulder sleeve - nickname
+206:raglan (sleeve) - nickname
+207:cap (sleeve) - nickname
+208:tulip (sleeve) - nickname
+209:puff (sleeve) - nickname
+210:bell (sleeve) - nickname
+211:circular flounce (sleeve) - nickname
+212:poet (sleeve) - nickname
+213:dolman (sleeve), batwing (sleeve) - nickname
+214:bishop (sleeve) - nickname
+215:leg of mutton (sleeve) - nickname
+216:kimono (sleeve) - nickname
+217:cargo (pocket) - nickname
+218:patch (pocket) - nickname
+219:welt (pocket) - nickname
+220:kangaroo (pocket) - nickname
+221:seam (pocket) - nickname
+222:slash (pocket) - nickname
+223:curved (pocket) - nickname
+224:flap (pocket) - nickname
+225:single breasted - opening type
+226:double breasted - opening type
+227:lace up - opening type
+228:wrapping - opening type
+229:zip-up - opening type
+230:fly (opening) - opening type
+231:chained (opening) - opening type
+232:buckled (opening) - opening type
+233:toggled (opening) - opening type
+234:no opening - opening type
+281:plastic - non-textile material type
+282:rubber - non-textile material type
+283:metal - non-textile material type
+285:feather - non-textile material type
+286:gem - non-textile material type
+287:bone - non-textile material type
+288:ivory - non-textile material type
+289:fur - non-textile material type
+290:suede - leather
+291:shearling - leather
+292:crocodile - leather
+293:snakeskin - leather
+294:wood - non-textile material type
+295:no non-textile material - non-textile material type
+296:burnout - textile finishing, manufacturing techniques
+297:distressed - textile finishing, manufacturing techniques
+298:washed - textile finishing, manufacturing techniques
+299:embossed - textile finishing, manufacturing techniques
+300:frayed - textile finishing, manufacturing techniques
+301:printed - textile finishing, manufacturing techniques
+302:ruched - textile finishing, manufacturing techniques
+303:quilted - textile finishing, manufacturing techniques
+304:pleat - textile finishing, manufacturing techniques
+305:gathering - textile finishing, manufacturing techniques
+306:smocking - textile finishing, manufacturing techniques
+307:tiered - textile finishing, manufacturing techniques
+308:cutout - textile finishing, manufacturing techniques
+309:slit - textile finishing, manufacturing techniques
+310:perforated - textile finishing, manufacturing techniques
+311:lining - textile finishing, manufacturing techniques
+312:applique(a) - textile finishing, manufacturing techniques
+313:bead(a) - textile finishing, manufacturing techniques
+314:rivet(a) - textile finishing, manufacturing techniques
+315:sequin(a) - textile finishing, manufacturing techniques
+316:no special manufacturing technique - textile finishing, manufacturing techniques
+317:plain (pattern) - textile pattern
+318:abstract - textile pattern
+319:cartoon - textile pattern
+320:letters, numbers - textile pattern
+321:camouflage - textile pattern
+322:check - textile pattern
+323:dot - textile pattern
+324:fair isle - textile pattern
+325:floral - textile pattern
+326:geometric - textile pattern
+327:paisley - textile pattern
+328:stripe - textile pattern
+329:houndstooth (pattern) - textile pattern
+330:herringbone (pattern) - textile pattern
+331:chevron - textile pattern
+332:argyle - textile pattern
+333:leopard - animal
+334:snakeskin (pattern) - animal
+335:cheetah - animal
+336:peacock - animal
+337:zebra - animal
+338:giraffe - animal
+339:toile de jouy - textile pattern
+340:plant - textile pattern

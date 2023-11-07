@@ -27,6 +27,8 @@ from __future__ import print_function
 import base64
 import csv
 import io
+import json
+from pathlib import Path
 
 from absl import flags
 from absl import logging
@@ -62,6 +64,9 @@ flags.DEFINE_string(
     'label_map_file', '',
     'The label map file. See --label_map_format for the definition.')
 flags.DEFINE_string(
+    'attribute_label_map_file', '',
+    'The attribute label map file. See --label_map_format for the definition.')
+flags.DEFINE_string(
     'label_map_format', 'csv',
     'The format of the label map file. Currently only support `csv` where the '
     'format of each row is: `id:name`.')
@@ -81,6 +86,22 @@ flags.DEFINE_float(
     'The minimum score thresholds in order to draw boxes.')
 
 
+def load_map_file(csv_file):
+    result = dict()
+
+    reader = csv.reader(csv_file, delimiter=':')
+    for row in reader:
+        if len(row) != 2:
+            raise ValueError('Each row of the csv label map file must be in '
+                            '`id:name` format.')
+        id_index = int(row[0])
+        name = row[1]
+        result[id_index] = {
+            'id': id_index,
+            'name': name,
+        }
+    return result
+
 def main(unused_argv):
   del unused_argv
   # Load the label map.
@@ -88,17 +109,9 @@ def main(unused_argv):
   label_map_dict = {}
   if FLAGS.label_map_format == 'csv':
     with tf.gfile.Open(FLAGS.label_map_file, 'r') as csv_file:
-      reader = csv.reader(csv_file, delimiter=':')
-      for row in reader:
-        if len(row) != 2:
-          raise ValueError('Each row of the csv label map file must be in '
-                           '`id:name` format.')
-        id_index = int(row[0])
-        name = row[1]
-        label_map_dict[id_index] = {
-            'id': id_index,
-            'name': name,
-        }
+      label_map_dict = load_map_file(csv_file)
+    with tf.gfile.Open(FLAGS.attribute_label_map_file, 'r') as csv_file:
+      attribute_label_map_dict = load_map_file(csv_file)
   else:
     raise ValueError(
         'Unsupported label map format: {}.'.format(FLAGS.label_mape_format))
@@ -155,7 +168,9 @@ def main(unused_argv):
       print(' - Loading the checkpoint...')
       saver.restore(sess, FLAGS.checkpoint_path)
 
-      res = []
+      res = list()
+      human_res = list()
+
       image_files = tf.gfile.Glob(FLAGS.image_file_pattern)
       for i, image_file in enumerate(image_files):
         print(' - Processing image %d...' % i)
@@ -197,6 +212,31 @@ def main(unused_argv):
             'masks': encoded_masks,
         })
 
+        for i in range(num_detections):
+            class_data = label_map_dict[np_classes[i]]
+            attribute_index = np.argmax(np_attributes[i])
+            # because the ids are not contingious I suspect
+            # the value returned is actually the index position
+            if attribute_index < len(attribute_label_map_dict):
+              attribute_data = list(attribute_label_map_dict.items())[attribute_index][1]
+            else:
+              # TODO: Figure what is actually happening here
+              attribute_data = {"id": attribute_index}
+            # attribute_id = np.argmax(np_attributes[i])
+            # if attribute_id in attribute_label_map_dict:
+            #     attribute_data = attribute_label_map_dict[np.argmax(np_attributes[i])]
+            # else:
+            #    # TODO figure out the missing attribute mappings
+            #    attribute_data = {"id": attribute_id}
+
+            human_res.append({
+              'image_file': image_file,
+              'box': [float(x) for x in np_boxes[i]],
+              'score': float(np_scores[i]),
+              'class': class_data,
+              'attribute': attribute_data,
+            })
+
         image_with_detections = (
             visualization_utils.visualize_boxes_and_labels_on_image_array(
                 np_image,
@@ -229,6 +269,7 @@ def main(unused_argv):
   with tf.gfile.GFile(FLAGS.output_html, 'w') as f:
     f.write(html_str)
   np.save(FLAGS.output_file, res)
+  Path(FLAGS.output_file).with_suffix(".json").write_text(json.dumps(human_res, ensure_ascii=False, indent =2))
 
 
 if __name__ == '__main__':

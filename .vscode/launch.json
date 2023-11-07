@@ -22,6 +22,7 @@
                 "--image_size=1024", 
                 "--checkpoint_path=${workspaceFolder}/models/official/detection/projects/fashionpedia/checkpoints/fashionpedia-spinenet-143/model.ckpt",
                 "--label_map_file=${workspaceFolder}/models/official/detection/projects/fashionpedia/dataset/fashionpedia_label_map.csv", 
+                "--attribute_label_map_file=${workspaceFolder}/models/official/detection/projects/fashionpedia/dataset/fashionpedia_label_attributes_map.csv",
                 "--image_file_pattern=${workspaceFolder}/models/official/detection/projects/fashionpedia/images/train/*.jpg",
                 "--output_html=${workspaceFolder}/models/official/detection/projects/fashionpedia/output/outSpine.html", 
                 "--max_boxes_to_draw=15", 

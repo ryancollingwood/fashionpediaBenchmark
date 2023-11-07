@@ -6,7 +6,7 @@ charset-normalizer==2.0.10
 cloud-tpu-samples @ file:///workspaces/fashionpediaBenchmark/models
 crcmod==1.7
 cycler==0.11.0
-Cython==0.29.26
+Cython==3.0.5
 flatbuffers==2.0
 fonttools==4.28.5
 gast==0.4.0
@@ -43,7 +43,7 @@ Pillow==9.0.0
 protobuf==3.19.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycocotools==2.0.4
+pycocotools>=2.0.7
 pyparsing==3.0.6
 python-dateutil==2.8.2
 pytz==2021.3
